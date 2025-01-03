@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>추천 병원</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        table {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        th, td {
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        thead {
+            background-color: #6495ED;
+            color: white;
+        }
+
+        tbody tr:nth-child(odd) {
+            background-color: #F0F8FF;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #F0F8FF;
+        }
+
+        table {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        tbody tr:hover {
+            background-color: #87CEFA;
+            cursor: pointer;
+        }
+
+        h1 {
+            font-weight: bold;
+            color: #4169E1;
+            text-align: center;
+            margin-top: 20px;
+        }
+        #viewAllMapButton {
+            background-color: #d3d3d3; /* 연한 회색 */
+            border-color: #b0b0b0; /* 버튼 테두리 색상도 연한 회색으로 */
+            color: #333; /* 버튼 텍스트 색상 */
+        }
+        #viewAllMapButton:hover {
+            background-color: #b0b0b0; /* 호버 시 버튼 색상 */
+            border-color: #b0b0b0; /* 호버 시 테두리 색상 */
+          }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px 20px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            box-sizing: border-box;
+        }
+
+        .navbar ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar ul li {
+            margin: 0 10px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .navbar ul li a:hover {
+            color: #ff4e50;
+        }
+
+        .navbar .button {
+            background-color: #ff4e50;
+            padding: 8px 16px;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .navbar .button:hover {
+            background-color: #f44336;
+        }
+
+        .navbar .dropdown {
+            position: relative;
+        }
+        .navbar .dropdown > a {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 5px;
+        }
+
+        .navbar .dropdown i {
+            font-size: 0.8rem;
+            transition: transform 0.3s ease;
+        }
+
+        .navbar .dropdown:hover i {
+            transform: rotate(180deg);
+        }
+        .navbar .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: rgba(0, 0, 0, 0.9);
+            list-style: none;
+            padding: 10px 0;
+            margin: 0;
+            border-radius: 4px;
+            min-width: 150px;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar .dropdown-menu li {
+            padding: 8px 20px;
+            text-align: left;
+        }
+
+        .navbar .dropdown-menu li a {
+            text-decoration: none;
+            color: #ffffff;
+            display: block;
+            font-size: 0.9rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar .dropdown-menu li a:hover {
+            background-color: #ff4e50;
+            color: #ffffff;
+        }
+
+        .navbar .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <div class="logo"><i class="fas fa-ambulance"></i> Emergency Assist</div>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/posts">Post</a></li>
+        <li class="dropdown">
+            <a href="#services">Services <i class="fas fa-caret-down"></i></a>
+            <ul class="dropdown-menu">
+                <li><a href="#service1">Service 1</a></li>
+                <li><a href="#service2">Service 2</a></li>
+                <li><a href="#service3">Service 3</a></li>
+            </ul>
+        </li>
+        <li><a href="#contact">Contact</a></li>
+
+        <li>
+            <a href="/logout" class="btn btn-danger navbar-btn">logout</a>
+        </li>
+    </ul>
+</div>
+
+
+<h1 style="margin-top: 80px;">추천 병원</h1>
+<div class="container">
+    <table class="table table-bordered table-striped">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>병원 이름</th>
+            <th>주소</th>
+            <th>응급 등급</th>
+            <th>전화번호1</th>
+            <th>전화번호2</th>
+            <th>거리(km)</th>
+            <th>지도</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="hospital, iterStat : ${hospitalList}">
+            <td th:text="${iterStat.index + 1}"></td>
+            <td th:text="${hospital.hospitalName}"></td>
+            <td th:text="${hospital.address}"></td>
+            <td th:text="${hospital.emergencyMedicalInstitutionType}"></td>
+            <td th:text="${hospital.phoneNumber1}"></td>
+            <td th:text="${hospital.phoneNumber3}"></td>
+            <td th:text="${hospital.distance} + ' km'"></td>
+            <td>
+                <!-- 모든 병원 정보를 JavaScript 함수로 전달 -->
+                <button type="button" class="btn btn-primary" style="font-size: 12px;"
+                        th:data-latitude="${hospital.latitude}"
+                        th:data-longitude="${hospital.longitude}"
+                        th:data-name="${hospital.hospitalName}"
+                        th:data-address="${hospital.address}"
+                        th:data-type="${hospital.emergencyMedicalInstitutionType}"
+                        th:data-phone1="${hospital.phoneNumber1}"
+                        th:data-phone3="${hospital.phoneNumber3}"
+                        onclick="redirectToMap(this)">
+                    지도 보기
+                </button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div class="text-center mt-4">
+    <form id="viewAllMapForm" method="POST" action="/map">
+        <input type="hidden" name="hospitalList" id="hospitalListInput">
+        <input type="hidden" name="inputLatitude" id="inputLatitude">
+        <input type="hidden" name="inputLongitude" id="inputLongitude">
+        <button type="submit" class="btn btn-success" id="viewAllMapButton">전체 지도 보기</button>
+    </form>
+</div>
+
+<script th:inline="javascript">
+    // Thymeleaf를 통해 서버에서 hospitalList를 JavaScript로 전달
+    const hospitalList = /*[[${hospitalList}]]*/ [];
+    const inputLatitude = /*[[${inputLatitude}]]*/ 0;
+    const inputLongitude = /*[[${inputLongitude}]]*/ 0;
+
+    document.getElementById("viewAllMapButton").addEventListener("click", function (event) {
+        event.preventDefault(); // 기본 폼 제출을 막음
+
+        // JSON 데이터를 직렬화하여 숨겨진 필드에 추가
+        document.getElementById("hospitalListInput").value = JSON.stringify(hospitalList);
+
+        // 입력받은 위도, 경도 데이터를 숨겨진 필드에 추가
+        document.getElementById("inputLatitude").value = inputLatitude;
+        document.getElementById("inputLongitude").value = inputLongitude;
+
+        // 폼을 제출
+        document.getElementById("viewAllMapForm").submit();
+    });
+
+    function redirectToMap(button) {
+        const latitude = button.dataset.latitude;
+        const longitude = button.dataset.longitude;
+        const hospitalName = button.dataset.name;
+        const address = button.dataset.address;
+        const emergencyMedicalInstitutionType = button.dataset.type;
+        const phoneNumber1 = button.dataset.phone1;
+        const phoneNumber3 = button.dataset.phone3;
+
+        const url = `/map?latitude=${latitude}&longitude=${longitude}&inputLatitude=${inputLatitude}&inputLongitude=${inputLongitude}&hospitalName=${encodeURIComponent(hospitalName)}&address=${encodeURIComponent(address)}&emergencyMedicalInstitutionType=${encodeURIComponent(emergencyMedicalInstitutionType)}&phoneNumber1=${encodeURIComponent(phoneNumber1)}&phoneNumber3=${encodeURIComponent(phoneNumber3)}`;
+
+        console.log("Redirecting to: ", url);
+        window.location.href = url;
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
