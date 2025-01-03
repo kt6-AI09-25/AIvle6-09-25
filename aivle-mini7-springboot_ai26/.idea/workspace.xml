@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="02384e51-2c5e-4eef-a644-648bae77093e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aivle/mini7/config/CustomAuthenticationSuccessHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aivle/mini7/config/DataInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aivle/mini7/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aivle/mini7/controller/AdminController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aivle/mini7/controller/AuthController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aivle/mini7/controller/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aivle/mini7/controller/MapController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aivle/mini7/controller/MoveTimeCon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aivle/mini7/controller/PostController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aivle/mini7/controller/TotalMapController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aivle/mini7/dto/LogDetailsDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aivle/mini7/dto/LogDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aivle/mini7/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aivle/mini7/model/Log.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aivle/mini7/model/LogDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aivle/mini7/model/Post.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aivle/mini7/repository/LogDetailsRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aivle/mini7/repository/LogRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aivle/mini7/repository/PostRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aivle/mini7/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aivle/mini7/service/CustomUserDetailsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aivle/mini7/service/LogDetailsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aivle/mini7/service/LogService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aivle/mini7/service/MoveTimeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aivle/mini7/service/PostService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application-dockerdb.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/database/em.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/sb-admin-2.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/demo/chart-area-demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/demo/chart-bar-demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/demo/chart-pie-demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/demo/datatables-demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/sb-admin-2.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/tables.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/time.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/posts/createform.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/posts/detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/posts/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/posts/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/posts/refuse.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aivle/mini7/client/dto/HospitalResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aivle/mini7/client/dto/HospitalResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aivle/mini7/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aivle/mini7/controller/IndexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-dev.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/recommend_hospital.html" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="mini7" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="mini7" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="mini7" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2q5sgu464PQktT9xaa7V69nplxC" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Spring Admin.executor": "Run",
+    "Application.Spring Boot App.executor": "Run",
+    "Application.temp.executor": "Run",
+    "Gradle.Build aivle-mini7-springboot.executor": "Run",
+    "Gradle.aivle-mini7-springboot [:com.aivle.mini7.Mini7Application.main()].executor": "Run",
+    "Gradle.aivle-mini7-springboot [bootJar].executor": "Run",
+    "Gradle.aivle-mini7-springboot [build].executor": "Run",
+    "JUnit.Whole project (1).executor": "Run",
+    "JUnit.Whole project.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Spring Boot.Mini7Application.executor": "Run",
+    "git-widget-placeholder": "6기-개인-최초제공소스",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/User/aivle/aivle-mini7-springboot",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "Template Data Languages",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\aivle\aivle-mini7-springboot" />
+      <recent name="C:\Users\User\Downloads\7차 팀원 프로젝트\aivle-mini7-springboot\src\main\resources\templates\posts" />
+      <recent name="C:\Users\User\Downloads\7차 팀원 프로젝트\aivle-mini7-springboot\src\main\java\com\aivle\mini7\service" />
+      <recent name="C:\Users\User\Downloads\7차 팀원 프로젝트\aivle-mini7-springboot\src\main\java\com\aivle\mini7\controller" />
+      <recent name="C:\Users\User\Downloads\7차 팀원 프로젝트\aivle-mini7-springboot\src\main\java\com\aivle\mini7\config" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\065150\aivle-mini7-springboot\src\main\resources\static\css" />
+      <recent name="C:\Users\User\065150\aivle-mini7-springboot\src\main\resources\static" />
+      <recent name="C:\Users\User\065150\aivle-mini7-springboot\src\main\resources\templates\admin\css" />
+      <recent name="C:\Users\User\065150\aivle-mini7-springboot\src\main\java\com\aivle\mini7\controller" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.aivle.mini7.service" />
+      <recent name="com.aivle.mini7.repository" />
+      <recent name="com.aivle.mini7.dto" />
+      <recent name="com.aivle.mini7.model" />
+      <recent name="com.aivle.mini7.controller" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.aivle-mini7-springboot [bootJar]">
+    <configuration name="Spring Boot App" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.aivle.mini7.Mini7Application" />
+      <module name="mini7.main" />
+      <option name="VM_PARAMETERS" value="-Dspring.profiles.active=dev" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="temp" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.aivle.mini7.Mini7Application" />
+      <option name="VM_PARAMETERS" value="-Dspring.profiles.active=local" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="aivle-mini7-springboot [bootJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="bootJar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="aivle-mini7-springboot" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="aivle-mini7-springboot" />
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Mini7Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="ACTIVE_PROFILES" value="dev" />
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="mini7.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.aivle.mini7.Mini7Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.temp" />
+      <item itemvalue="Application.Spring Boot App" />
+      <item itemvalue="Gradle.aivle-mini7-springboot [bootJar]" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.aivle-mini7-springboot [bootJar]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>$USER_HOME$/.subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="02384e51-2c5e-4eef-a644-648bae77093e" name="Changes" comment="" />
+      <created>1733963885854</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1733963885854</updated>
+      <workItem from="1733963887511" duration="23430000" />
+      <workItem from="1734346842730" duration="1465000" />
+      <workItem from="1734525714901" duration="3162000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/mini7$aivle_mini7_springboot__bootJar_.ic" NAME="aivle-mini7-springboot [bootJar] Coverage Results" MODIFIED="1734657458940" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+  </component>
+</project>
